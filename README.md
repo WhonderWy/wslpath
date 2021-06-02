@@ -1,32 +1,39 @@
 # wslpath
 
-wslpath - Converts Unix and Windows format paths in WSL Edit
+This is a fork of [laurent22's wslpath](https://github.com/laurent22/wslpath) with the goal to turn it into a service for absolutely no reason at all other than why not.
+
+Also port to Python 3 because I like it more than PHP.
+
+wslpath - Converts between Unix and Windows-style paths in WSL.
+Mounts are assumed to be `/mnt/$DRIVE_LETTER`
 
 # Installation
 
-Note: PHP is required.
+Instructions will be updated eventually.
+<!-- Note: PHP is required.
 
-	wget 'https://raw.githubusercontent.com/laurent22/wslpath/master/wslpath'
-	chmod 755 wslpath
-	sudo mv wslpath /usr/bin
+    wget 'https://raw.githubusercontent.com/laurent22/wslpath/master/wslpath'
+    chmod 755 wslpath
+    sudo mv wslpath /usr/bin
+-->
 
 # Usage
 
-	wslpath [-m|-u|-w|-h] NAME[:line[:col]]
+    wslpath [-m|-u|-w|-h] NAME[:line[:col]]
 
-	Output type options:
+    Output type options:
 
-	  -w           (default) prints Windows form of NAME (C:\WINNT)
-	  -m           like -w, but with regular slashes (C:/WINNT)
-	  -u           prints Unix form of NAME (/mnt/c/winnt)
+      -w           (default) prints Windows form of NAME (C:\WINNT)
+      -m           like -w, but with regular slashes (C:/WINNT)
+      -u           prints Unix form of NAME (/mnt/c/winnt)
 
-	Other options:
+    Other options:
 
-	  -h           displays usage information
+      -h           displays usage information
 
-	If no output type is selected, the program will try to detect the form of
-	NAME and print the opposite type (eg. will print Windows form for Unix
-	path).
+    If no output type is selected, the program will try to detect the form of
+    NAME and print the opposite type (eg. will print Windows form for Unix
+    path).
 
 # Features
 
